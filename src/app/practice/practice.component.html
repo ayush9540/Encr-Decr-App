@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <button (click)="onAddNew()" class="btn btn-warning">Add More</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-danger" (click)="changemode()">Toggle ({{bulbon ? "ayush" : "aditya"}})</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let name of names; let i = index" (click)="onremove(i)">
+                 <a>{{name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

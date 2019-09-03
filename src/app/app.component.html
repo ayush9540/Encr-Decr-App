@@ -16,37 +16,43 @@
     </div>
 </div> -->
 
-<div class="container">  
-  <div class="row">  
-    <div class="col-sm-6">     
-      <div class="form-group">  
-        <label for="txtTextToConvert">Plain Text</label>  
-        <input type="text" class="form-control" placeholder="Enter text you want to encrypt" [(ngModel)]="plainText">  
-      </div>  
-  
-      <div class="form-group">  
-        <label for="txtPassword">Password</label>  
-        <input type="password" class="form-control" placeholder="Enter encryption password" [(ngModel)]="encPassword">  
-      </div>  
-      <textarea class="form-control" readonly rows="3">{{conversionEncryptOutput}}</textarea>  
-      <br>  
-      <button type="button" class="btn btn-success float-right" (click)="convertText('encrypt')">Encrypt</button>  
-    </div>  
-    <div class="col-sm-6">  
-      <div class="form-group">  
-        <label for="txtTextToConvert">Encrypted Text</label>  
-        <input type="text" class="form-control" placeholder="Enter text you want to decrypt" [(ngModel)]="encryptText">  
-      </div>  
-  
-      <div class="form-group">  
-        <label for="txtPassword">Password</label>  
-        <input type="password" class="form-control" placeholder="Enter decryption password" [(ngModel)]="decPassword">  
-      </div>  
-      <textarea class="form-control" readonly rows="3">{{conversionDecryptOutput}}</textarea>  
-      <br>  
-      <button type="button" class="btn btn-success float-right" (click)="convertText('decrypt')">Decrypt</button>  
-    </div>  
-  </div>  
-</div>
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtTextToConvert">Plain Text</label>
+                <input type="text" class="form-control" placeholder="Enter text you want to encrypt" [(ngModel)]="plainText">
+            </div>
 
+            <div class="form-group">
+                <label for="txtPassword">Password</label>
+                <input type="password" class="form-control" placeholder="Enter encryption password" [(ngModel)]="encPassword">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" readonly rows="3">{{conversionEncryptOutput}}</textarea>
+            </div>
+
+            <button type="button" class="btn btn-success float-right" (click)="convertText('encrypt')">Encrypt</button>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtTextToConvert">Encrypted Text</label>
+                <input type="text" class="form-control" placeholder="Enter text you want to decrypt" [(ngModel)]="encryptText">
+            </div>
+
+            <div class="form-group">
+                <label for="txtPassword">Password</label>
+                <input type="password" class="form-control" placeholder="Enter decryption password" [(ngModel)]="decPassword">
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" readonly rows="3">{{conversionDecryptOutput}}</textarea>
+            </div>
+
+            <button type="button" class="btn btn-success float-right" (click)="convertText('decrypt')">Decrypt</button>
+        </div>
+    </div>
+</div>
 <!-- <app-practice></app-practice> -->
+<app-toggle-enc-dec></app-toggle-enc-dec>

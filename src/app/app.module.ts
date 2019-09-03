@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { PracticeComponent } from './practice/practice.component';
+import { ToggleEncDecComponent } from './toggle-enc-dec/toggle-enc-dec.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PracticeComponent
+    PracticeComponent,
+    ToggleEncDecComponent
   ],
   imports: [
     BrowserModule,

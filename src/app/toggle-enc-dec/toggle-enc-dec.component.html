@@ -1,6 +1,6 @@
-<div class="container mb-5">
+<div class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="form-group">
                 <label for="txtTextToConvert">{{ encryptMode ? "Plain" : "Encrypted" }} Text</label>
                 <input type="text" class="form-control" id="txtTextToConvert" placeholder="Enter text you want to {{ encryptMode ? 'encrypt' : 'decrypt' }}" [(ngModel)]="textToConvert">
@@ -20,6 +20,6 @@
                     <button type="button" class="btn btn-info" (click)="convertText()">{{ encryptMode ? "Encrypt" : "Decrypt" }}</button>
                 </div>
             </div>
-         </div>
-    </div>      
+        </div>
+    </div>
 </div>

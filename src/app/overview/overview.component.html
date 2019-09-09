@@ -1,90 +1,107 @@
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
-        <h4>What is AES encryption?</h4>
-        <p>
-            AES or Advanced Encryption Standard is a cipher, i.e., a method for encrypting and decrypting information. Whenever you transmit files over secure file transfer protocols like HTTPS, FTPS, SFTP, WebDAVS, OFTP, or AS2, there's a good chance your data will be encrypted by some flavor of AES - either AES 256, 192, or 128.
-        </p>
-        <p>
-            The Advanced Encryption Standard, or AES, is a symmetric block cipher chosen by the U.S. government to protect classified information and is implemented in software and hardware throughout the world to encrypt sensitive data.
-        </p>
-        <p>
-            When it comes to cyber security, AES is one of those acronyms that you see popping up everywhere. That’s because it has become the global standard of encryption and it is used to keep a significant amount of our communications safe.
-            The Advanced Encryption Standard (AES) is a fast and secure form of encryption that keeps prying eyes away from our data. We see it in messaging apps like WhatsApp and Signal, programs like VeraCrypt and WinZip, in a range of hardware and a variety of other technologies that we use all of the time.
-            <br><br>
-        </p>       
-        <h4>Why was AES developed?</h4>
-        <p>
-            The earliest types of encryption were simple, using techniques like changing each letter in a sentence to the one that comes after it in the alphabet
-        </p>
-        <p>
-            As people got better at cracking codes, the encryption had to become more sophisticated so that the messages could be kept secret. This arms race of coming up with more and more sophisticated methods while others poured their efforts into breaking them led to increasingly complicated techniques, such as the Enigma machine invented by the Germans in World War I.
-        </p>
-        <p>
-            The rise of electronic communication has also been a boon for encryption. In the 1970s, the US National Bureau of Standards (NBS) began searching for a standard means that could be used to encrypt sensitive government information. The result of their search was to adopt a symmetric key algorithm developed at IBM, which is now called the Data Encryption Standard (DES). The DES served its purpose relatively well for the next couple of decades, but in the nineties, some security concerns began to pop up.
-        </p>
-        <p>
-            The DES only has a 56-bit key (compared to the maximum of 256-bit in AES, but we’ll get to that later), so as technology and cracking methods improved, attacks against it started to become more practical. The first DES encrypted message to be broken open was in 1997, by the DESCHALL Project in an RSA Security-sponsored competition.
-        </p>
-        <p>
-            The next year, the Electronic Frontier Foundation (EFF) built a DES cracker which could brute force a key in just over two days. In 1999, the EFF and the internet’s first computing collective, distributed.net, collaborated to get that time down to under 24 hours.
-        </p>
-        <p>
-            Although these attacks were costly and impractical to mount, they began to show that the DES’s reign as the go-to encryption standard was coming to an end. With computing power exponentially increasing according to Moore’s law, it was only a matter of time until the DES could no longer be relied on.
-        </p>
-        <p>
-            The US government set out on a five year mission to evaluate a variety of different encryption methods in order to find a new standard that would be secure. The National Institute of Standards and Technology (NIST) announced that it had finally made its selection in late 2001.
-        </p>
-        <p>
-            Their choice was a specific subset of the Rijndael block cipher, with a fixed block-size of 128-bits and key sizes of 128, 192 and 256-bits. It was developed by Joan Daemen and Vincent Rijmen, two cryptographers from Belgium. In May of 2002, AES was approved to become the US federal standard and quickly became the standard encryption algorithm for the rest of the world as well.
-            <br><br>
-        </p>
-        <h4>AES Features</h4>
-        <p>
-            NIST specified the new advanced encryption standard algorithm must be a block cipher capable of handling 128 bit blocks, using keys sized at 128, 192, and 256 bits; other criteria for being chosen as the next advanced encryption standard algorithm included:
-        </p>
-        <ul>
-            <li>
-                Security: Competing algorithms were to be judged on their ability to resist attack, as compared to other submitted ciphers, though security strength was to be considered the most important factor in the competition.
-            </li>
-            <li>
-                Cost: Intended to be released under a global, nonexclusive and royalty-free basis, the candidate algorithms were to be evaluated on computational and memory efficiency.
-            </li>
-            <li>
-                Implementation: Algorithm and implementation characteristics to be evaluated included the flexibility of the algorithm; suitability of the algorithm to be implemented in hardware or software; and overall, relative simplicity of implementation.
-            </li>
-            <br>
-        </ul> 
-        <h4>How is the AES encryption algorithm used in secure file transfers?</h4>
-        <p>
-            As mentioned earlier, AES is implemented in secure file transfer protocols like FTPS, HTTPS, SFTP, AS2, WebDAVS, and OFTP. But what exactly is its role? 
-        </p>
-        <p>
-            Because symmetric and asymmetric encryption algorithms each have their own strengths, modern secure file transfer protocols normally use a combination of the two. Asymmetric key ciphers a.k.a. public key encryption algorithms are great for key distribution and hence are used to encrypt the session key used for symmetric encryption. 
-        </p>
-        <p>
-            Symmetric key ciphers like AES, on the other hand, are more suitable for encrypting the actual data (and commands) because they require less resources and are also much faster than asymmetric ciphers. The article Symmetric vs Asymmetric Encryption has a more thorough discussion regarding these two groups of ciphers. 
-        </p>
-        <p>
-            Here's a simplified diagram illustrating the encryption process during a typical secure file transfer secured by SSL/TLS (e.g. HTTPS, FTPS, WebDAVS) or SSH (e.g. SFTP). AES encryption operates in step 3. 
-            <br><br>           
-                <img src="https://www.jscape.com/hs-fs/hub/26878/file-13611379-png/images/hybrid_cryptosystem_used_in_file_transfer.png" class="img-responsive w-100" alt="encr-decr">           
-            <br><br>
-        </p>       
-        <h4>Why was this cipher chosen for AES?</h4>
-        <p>
-            With any kind of encryption, there are always trade-offs. You could easily have a standard that was exponentially more secure than AES, but it would take too long to encrypt and decrypt to be of any practical use. In the end, the Rijndael block cipher was chosen by NIST for its all-around abilities, including its performance on both hardware and software, ease of implementation and its level of security.
-            <br><br>
-        </p>
-        <h4>128 vs 192 vs 256-bit AES</h4>
-        <p>
-            AES has three different key lengths. The main difference is the number of rounds that the data goes through in the encryption process, 10, 12 and 14 respectively. In essence, 192-bit and 256-bit provide a greater security margin than 128-bit.
-        </p>
-        <p>
-            In the current technological landscape, 128-bit AES is enough for most practical purposes. Highly sensitive data handled by those with an extreme threat level, such as TOP SECRET documents controlled by the military, should probably be processed with either 192 or 256-bit AES.
-        </p>
-        <p>
-            If you are paranoid, you might prefer using 192 or 256-bit encryption wherever possible. This is fine if it makes it easier for you to sleep at night, but it’s really not necessary in most situations. It’s not without its costs either, with the extra four rounds of 256-bit encryption making it about 40 percent less efficient.
-        <br><br>
-        </p>
+        <div class="col-md-12 box-container pt-4">
+            <h4>What is AES encryption?</h4>
+            <p>
+                AES or Advanced Encryption Standard is a cipher, i.e., a method for encrypting and decrypting information. Whenever you transmit files over secure file transfer protocols like HTTPS, FTPS, SFTP, WebDAVS, OFTP, or AS2, there's a good chance your data will
+                be encrypted by some flavor of AES - either AES 256, 192, or 128.
+            </p>
+            <p>
+                The Advanced Encryption Standard, or AES, is a symmetric block cipher chosen by the U.S. government to protect classified information and is implemented in software and hardware throughout the world to encrypt sensitive data.
+            </p>
+            <p>
+                When it comes to cyber security, AES is one of those acronyms that you see popping up everywhere. That’s because it has become the global standard of encryption and it is used to keep a significant amount of our communications safe. The Advanced Encryption
+                Standard (AES) is a fast and secure form of encryption that keeps prying eyes away from our data. We see it in messaging apps like WhatsApp and Signal, programs like VeraCrypt and WinZip, in a range of hardware and a variety of other technologies
+                that we use all of the time.
+                <br><br>
+            </p>
+            <h4>Why was AES developed?</h4>
+            <p>
+                The earliest types of encryption were simple, using techniques like changing each letter in a sentence to the one that comes after it in the alphabet
+            </p>
+            <p>
+                As people got better at cracking codes, the encryption had to become more sophisticated so that the messages could be kept secret. This arms race of coming up with more and more sophisticated methods while others poured their efforts into breaking them
+                led to increasingly complicated techniques, such as the Enigma machine invented by the Germans in World War I.
+            </p>
+            <p>
+                The rise of electronic communication has also been a boon for encryption. In the 1970s, the US National Bureau of Standards (NBS) began searching for a standard means that could be used to encrypt sensitive government information. The result of their
+                search was to adopt a symmetric key algorithm developed at IBM, which is now called the Data Encryption Standard (DES). The DES served its purpose relatively well for the next couple of decades, but in the nineties, some security concerns
+                began to pop up.
+            </p>
+            <p>
+                The DES only has a 56-bit key (compared to the maximum of 256-bit in AES, but we’ll get to that later), so as technology and cracking methods improved, attacks against it started to become more practical. The first DES encrypted message to be broken open
+                was in 1997, by the DESCHALL Project in an RSA Security-sponsored competition.
+            </p>
+            <p>
+                The next year, the Electronic Frontier Foundation (EFF) built a DES cracker which could brute force a key in just over two days. In 1999, the EFF and the internet’s first computing collective, distributed.net, collaborated to get that time down to under
+                24 hours.
+            </p>
+            <p>
+                Although these attacks were costly and impractical to mount, they began to show that the DES’s reign as the go-to encryption standard was coming to an end. With computing power exponentially increasing according to Moore’s law, it was only a matter of
+                time until the DES could no longer be relied on.
+            </p>
+            <p>
+                The US government set out on a five year mission to evaluate a variety of different encryption methods in order to find a new standard that would be secure. The National Institute of Standards and Technology (NIST) announced that it had finally made its
+                selection in late 2001.
+            </p>
+            <p>
+                Their choice was a specific subset of the Rijndael block cipher, with a fixed block-size of 128-bits and key sizes of 128, 192 and 256-bits. It was developed by Joan Daemen and Vincent Rijmen, two cryptographers from Belgium. In May of 2002, AES was approved
+                to become the US federal standard and quickly became the standard encryption algorithm for the rest of the world as well.
+                <br><br>
+            </p>
+            <h4>AES Features</h4>
+            <p>
+                NIST specified the new advanced encryption standard algorithm must be a block cipher capable of handling 128 bit blocks, using keys sized at 128, 192, and 256 bits; other criteria for being chosen as the next advanced encryption standard algorithm included:
+            </p>
+            <ul>
+                <li>
+                    Security: Competing algorithms were to be judged on their ability to resist attack, as compared to other submitted ciphers, though security strength was to be considered the most important factor in the competition.
+                </li>
+                <li>
+                    Cost: Intended to be released under a global, nonexclusive and royalty-free basis, the candidate algorithms were to be evaluated on computational and memory efficiency.
+                </li>
+                <li>
+                    Implementation: Algorithm and implementation characteristics to be evaluated included the flexibility of the algorithm; suitability of the algorithm to be implemented in hardware or software; and overall, relative simplicity of implementation.
+                </li>
+                <br>
+            </ul>
+            <h4>How is the AES encryption algorithm used in secure file transfers?</h4>
+            <p>
+                As mentioned earlier, AES is implemented in secure file transfer protocols like FTPS, HTTPS, SFTP, AS2, WebDAVS, and OFTP. But what exactly is its role?
+            </p>
+            <p>
+                Because symmetric and asymmetric encryption algorithms each have their own strengths, modern secure file transfer protocols normally use a combination of the two. Asymmetric key ciphers a.k.a. public key encryption algorithms are great for key distribution
+                and hence are used to encrypt the session key used for symmetric encryption.
+            </p>
+            <p>
+                Symmetric key ciphers like AES, on the other hand, are more suitable for encrypting the actual data (and commands) because they require less resources and are also much faster than asymmetric ciphers. The article Symmetric vs Asymmetric Encryption has
+                a more thorough discussion regarding these two groups of ciphers.
+            </p>
+            <p>
+                Here's a simplified diagram illustrating the encryption process during a typical secure file transfer secured by SSL/TLS (e.g. HTTPS, FTPS, WebDAVS) or SSH (e.g. SFTP). AES encryption operates in step 3.
+                <br><br>
+                <img src="https://www.jscape.com/hs-fs/hub/26878/file-13611379-png/images/hybrid_cryptosystem_used_in_file_transfer.png" class="img-responsive w-100" alt="encr-decr">
+                <br><br>
+            </p>
+            <h4>Why was this cipher chosen for AES?</h4>
+            <p>
+                With any kind of encryption, there are always trade-offs. You could easily have a standard that was exponentially more secure than AES, but it would take too long to encrypt and decrypt to be of any practical use. In the end, the Rijndael block cipher
+                was chosen by NIST for its all-around abilities, including its performance on both hardware and software, ease of implementation and its level of security.
+                <br><br>
+            </p>
+            <h4>128 vs 192 vs 256-bit AES</h4>
+            <p>
+                AES has three different key lengths. The main difference is the number of rounds that the data goes through in the encryption process, 10, 12 and 14 respectively. In essence, 192-bit and 256-bit provide a greater security margin than 128-bit.
+            </p>
+            <p>
+                In the current technological landscape, 128-bit AES is enough for most practical purposes. Highly sensitive data handled by those with an extreme threat level, such as TOP SECRET documents controlled by the military, should probably be processed with
+                either 192 or 256-bit AES.
+            </p>
+            <p>
+                If you are paranoid, you might prefer using 192 or 256-bit encryption wherever possible. This is fine if it makes it easier for you to sleep at night, but it’s really not necessary in most situations. It’s not without its costs either, with the extra
+                four rounds of 256-bit encryption making it about 40 percent less efficient.
+                <br><br>
+            </p>
+        </div>
     </div>
 </div>
